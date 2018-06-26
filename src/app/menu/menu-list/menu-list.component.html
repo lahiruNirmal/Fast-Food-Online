@@ -1,0 +1,7 @@
+<div class="col-xs-12 col-sm-12 col-md-12">
+    <app-food-item
+      *ngFor = "let item of menuList; let i = index"
+      [foodItem]="item"
+      [index]="i"></app-food-item>
+</div>
+  

@@ -1,0 +1,26 @@
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col-xs-6 col-sm-6 col-md-6">
+    <app-shopping-item
+      (reloadShoppingItems) = "reload($event)"
+      *ngFor = "let item of shoppingList; let i = index"
+      [foodItem]="item"
+      [index]="i"></app-shopping-item>
+  </div>
+</div>
+
+<div class="row" *ngIf="shoppingList.length > 0; else NoItemIndicator">
+  <div class="col-xs-6 col-sm-6 col-md-6">
+    <button 
+      class="btn btn-dark btn-block" 
+      role="button"
+      (click)="checkOutShoppingCart()">Checkout</button>
+  </div>
+</div>
+
+<ng-template #NoItemIndicator>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Shopping Cart is empty</h2>
+    </div>
+  </div>
+</ng-template>

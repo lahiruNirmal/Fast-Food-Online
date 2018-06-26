@@ -1,0 +1,14 @@
+a{
+  color: white;
+
+}
+
+.nav-link{
+  margin-left: 30px;
+}
+
+li :hover{
+  background-color: crimson;
+  border-radius: 10px;
+}
+

@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg" *ngIf="this.tokenStatus === true; else loginform">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="font-size: 3em; font-weight: bold; font-style: italic; color: white;" routerLink="home">
+      <span><img class="img-responsive" style="width:100px;" src="../../assets/images/logo.png" ></span>
+       Fast Food Online</a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active" routerLinkActive="active">
+          <a 
+            class="nav-link" 
+            routerLink="home"
+            style="cursor: pointer; color: white;">MENU
+          </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a 
+            class="nav-link" 
+            routerLink="shoppingCart"
+            style="cursor: pointer; color: white;">SHOPPING CART</a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link"
+            (click)="authService.onLogOut()" 
+            style="color: white; cursor: pointer;">SIGN OUT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<ng-template #loginform>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="font-size: 3em; font-weight: bold; font-style: italic; color: white;" routerLink="home">
+        <span><img class="img-responsive" style="width:100px;" src="../../assets/images/logo.png" ></span>
+         Fast Food Online</a>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" routerLinkActive="active">
+            <a 
+              class="nav-link"
+              routerLink="signup" 
+              style="color: white;">REGISTER</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a 
+              class="nav-link"
+              routerLink="signin"
+              style="color: white;">SIGN IN</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</ng-template>

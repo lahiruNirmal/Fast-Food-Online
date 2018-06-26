@@ -1,0 +1,18 @@
+<div
+  class="list-group-item clearfix"
+  [routerLink]="[index]"
+  routerLinkActive="active">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ foodItem.name }}</h4>
+  </div>
+  <span class="pull-right">
+    <img 
+      [src]="imageAddress" 
+      alt="{{ foodItem.name }}"
+      class="img-responsive"
+      style="max-height: 50px;">
+  </span>
+  <div class="row" style="margin-top: 5px;">
+    <button class="btn btn-danger btn-block" (click)="removeItem()" role="button">Remove</button>
+  </div>
+</div>
